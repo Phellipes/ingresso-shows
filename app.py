@@ -45,6 +45,10 @@ def comprar():
         return redirect(url_for("painel"))
 
     return render_template("index.html")
+@app.route("/")
+def comprar():
+    return render_template("index.html")
+
 
 # Rota para o painel administrativo
 @app.route("/painel")
@@ -58,6 +62,4 @@ if __name__ == "__main__":
         db.create_all()
     from waitress import serve
     serve(app, host="0.0.0.0", port=10000)
-    @app.route("/")
-def comprar():
-    return render_template("index.html")
+    
