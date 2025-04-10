@@ -46,7 +46,7 @@ def comprar():
 
     return render_template("index.html")
 @app.route("/")
-def comprar():
+def finalize(comprou):
     return render_template("index.html")
 
 
