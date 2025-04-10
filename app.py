@@ -45,9 +45,11 @@ def comprar():
         return redirect(url_for("painel"))
 
     return render_template("index.html")
-@app.route("/")
-def finalize(comprou):
-    return render_template("index.html")
+def finalize(comprou=None):
+    if comprou is None:
+        comprou = "Valor padrão"
+    print(comprou)
+
 
 
 # Rota para o painel administrativo
