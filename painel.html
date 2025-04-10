@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Painel de Administração</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Ingressos Vendidos</h1>
+    <table border="1" style="width: 80%; margin: auto;">
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>QR Code</th>
+        </tr>
+        {% for ingresso in ingressos %}
+        <tr>
+            <td>{{ ingresso.nome }}</td>
+            <td>{{ ingresso.email }}</td>
+            <td><img src="{{ ingresso.qr_code_path }}" width="100"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

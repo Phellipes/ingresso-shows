@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Comprar Ingresso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Compre seu ingresso agora!</h1>
+    <form method="POST">
+        <input type="text" name="nome" placeholder="Seu Nome" required><br>
+        <input type="email" name="email" placeholder="Seu Email" required><br>
+        <button type="submit">Comprar Ingresso</button>
+    </form>
+</body>
+</html>
