@@ -26,7 +26,7 @@ def gerar_qr_code(conteudo, ingresso_id):
     return caminho
 
 # Rota principal para compra de ingressos
-@app.route("/", methods=["GET", "POST"])
+@app.route("/comprar", methods=["GET", "POST"])
 def comprar():
     if request.method == "POST":
         nome = request.form["nome"]
@@ -58,7 +58,4 @@ if __name__ == "__main__":
         db.create_all()
     from waitress import serve
     serve(app, host="0.0.0.0", port=10000)
-@app.route("/comprar", methods=["GET", "POST"])
-def comprar():
-    return render_template("index.html")
-
+    
